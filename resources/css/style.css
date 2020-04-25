@@ -122,7 +122,19 @@ body {
 
 .footer-wrap footer a:hover {
     color: #b6b6b6b6;
-    transition: color 0.5s ease;
+    transition: color 0.5s ease-in;
+}
+
+
+a:-webkit-any-link a {
+    text-decoration: none;
+    color: #333333;
+    letter-spacing: 1px;
+}
+
+a:-webkit-any-link a:hover {
+    color: #b6b6b6b6;
+    transition: color 0.5s ease-in;
 }
 
 /* Animation keyframes */
