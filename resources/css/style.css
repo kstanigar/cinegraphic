@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    z-index: 2;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    mix-blend-mode: lighten;
+    animation: reveal 1.5s ease forwards,
+    swing 2.5s ease-in-out infinite alternate-reverse;
+    opacity: 0;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; 
+    object-fit: cover;
+    animation: reveal 4s ease 0.5s forwards, 
+    swing 2.5s ease-in-out infinite alternate-reverse;
+    opacity: 0;
+}
+
+@keyframes reveal {
+    from {
+      opacity: 0;  
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes swing {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(1.5deg);
+    }
+}
