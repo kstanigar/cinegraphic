@@ -122,7 +122,7 @@ body {
 
 .footer-wrap footer a:hover {
     color: #b6b6b6b6;
-    transition: color 0.5s ease-in;
+    transition: color 0.3s ease-in;
 }
 
 
@@ -134,7 +134,7 @@ a:-webkit-any-link a {
 
 a:-webkit-any-link a:hover {
     color: #b6b6b6b6;
-    transition: color 0.5s ease-in;
+    transition: color 0.3s ease-in;
 }
 
 /* Animation keyframes */
