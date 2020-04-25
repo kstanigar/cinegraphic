@@ -26,11 +26,12 @@ body {
     opacity: 0;
 }
 
+/* Nav */
 .hero nav {
     position: absolute;
     z-index: 1;
     width: 100%;
-    animation: announce 1.5s ease 2.5s forwards;
+    animation: announce 1.25s ease 3.25s forwards;
     opacity: 0;
 }
 
@@ -55,6 +56,7 @@ body {
     transition: color 0.7s ease;
 }
 
+/* Image */
 .hero img {
     position: absolute;
     top: 0;
@@ -65,21 +67,65 @@ body {
     z-index: 1;
     mix-blend-mode: lighten;
     animation: announce 1.5s ease forwards,
-    swing 3s ease-in-out infinite alternate-reverse;
+    swing 4s ease-in-out infinite alternate-reverse;
     opacity: 0;
 }
 
+/* Video */
 .hero video {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%; 
+    width: 100%;
+    object-fit: cover; 
     animation: reveal 4s ease 0.5s forwards, 
-    swing 3s ease-in-out infinite alternate-reverse;
+    swing 4s ease-in-out infinite alternate-reverse;
     opacity: 0;
 }
 
+
+/* Side bar footer */
+.footer-wrap {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -100px; 
+}
+
+.footer-wrap footer {
+    z-index: 1;
+    height: 100px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 7rem;
+    margin-bottom: 19rem;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    font-size: 8px;
+    animation: announce 1s ease 5s forwards;
+    opacity: 0;
+}
+
+.footer-wrap:after {
+  content: "";
+  display: block;
+  height: 100px;
+}
+
+.footer-wrap footer a {
+    text-decoration: none;
+    color: #333333;
+    letter-spacing: 1px;
+}
+
+.footer-wrap footer a:hover {
+    color: #b6b6b6b6;
+    transition: color 0.5s ease;
+}
+
+/* Animation keyframes */
 @keyframes reveal {
     from {
       opacity: 0;  
@@ -97,12 +143,15 @@ body {
     to {
         opacity: 1;
     }
+}
 
-@keyframes swing {
+/* Swing NOT USED */
+
+/* @keyframes swing {
     from {
         transform: rotateZ(0deg);
     }
     to {
-        transform: rotateZ(3deg);
+        transform: rotateZ(2deg);
     }
-}
+} */
