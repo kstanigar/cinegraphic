@@ -84,6 +84,20 @@ body {
     opacity: 0;
 }
 
+.hero h1 a {
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 4px;
+    opacity: 1;
+}
+
+.hero h1 a:hover {
+    color: #c9b069;
+    opacity: 0.8;
+    transition: color 0.5s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
 
 /* Side bar footer */
 .footer-wrap {
@@ -122,7 +136,7 @@ body {
 
 .footer-wrap footer a:hover {
     color: #b6b6b6b6;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease-in-out;
 }
 
 /* Webkit for Side bar */
@@ -134,7 +148,7 @@ a:-webkit-any-link a {
 
 a:-webkit-any-link a:hover {
     color: #b6b6b6b6;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease-in-out;
 }
 
 /* Animation keyframes */
