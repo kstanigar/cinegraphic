@@ -108,11 +108,11 @@ body {
     opacity: 0;
 }
 
-.footer-wrap:after {
+/* .footer-wrap:after {
   content: "";
   display: block;
   height: 0px;
-}
+} */
 
 .footer-wrap footer a {
     text-decoration: none;
@@ -125,6 +125,7 @@ body {
     transition: color 0.3s ease;
 }
 
+/* Webkit for Side bar */
 a:-webkit-any-link a {
     text-decoration: none;
     color: #333333;
@@ -132,7 +133,7 @@ a:-webkit-any-link a {
 }
 
 a:-webkit-any-link a:hover {
-    olor: #b6b6b6b6;
+    color: #b6b6b6b6;
     transition: color 0.3s ease;
 }
 
@@ -156,11 +157,11 @@ a:-webkit-any-link a:hover {
     }
 }
 
-/* @keyframes swing {
+@keyframes swing {
     from {
         transform: rotateZ(0deg);
     }
     to {
-        transform: rotateZ(2deg);
+        transform: rotateZ(1deg);
     }
-} */
+}
