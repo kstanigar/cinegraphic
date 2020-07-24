@@ -91,6 +91,13 @@ body {
     swing 4s ease-in-out infinite alternate-reverse;
     opacity: 0;
 }
+.studios {
+  color: #000;
+  font-size: 5rem;
+  letter-spacing: 3rem;
+  font-weight: 300;
+  animation: reveal 3s ease 8s backwards;
+}
 
 /* Video */
 .hero video {
