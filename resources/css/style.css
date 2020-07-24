@@ -1,7 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -22,7 +30,8 @@ body {
     margin-top: 15rem;
     font-size: 8rem;
     font-weight: 300;
-    animation: announce 4s ease 1s forwards;
+    -webkit-animation: announce 4s ease 1s forwards;
+            animation: announce 4s ease 1s forwards;
     opacity: 0;
 }
 
@@ -31,28 +40,38 @@ body {
     position: absolute;
     z-index: 1;
     width: 100%;
-    animation: announce 1s ease 3s forwards;
+    -webkit-animation: announce 1s ease 4.5s forwards;
+            animation: announce 1s ease 4.5s forwards;
     opacity: 0;
 }
 
 .hero nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding: 1rem 4rem 0;
     list-style: none;  
 }
 
 .hero nav a {
     text-decoration: none;
-    color: #c9b069;
+    color: rgb(70, 70, 70);
     font-size: 20px;
     letter-spacing: 2.5px;
     font-weight: bold;
+    letter-spacing: 0.2rem;
+    text-shadow: 0px 0.5px 3px #222;
 }
 
 .hero nav a:hover {
     color: #000;
+    -webkit-transition: color 0.7s ease;
+    -o-transition: color 0.7s ease;
     transition: color 0.7s ease;
 }
 
@@ -63,7 +82,8 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     z-index: 1;
     mix-blend-mode: lighten;
     animation: announce 1.5s ease forwards,
@@ -78,7 +98,8 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    object-fit: cover; 
+    -o-object-fit: cover;
+       object-fit: cover; 
     animation: reveal 4s ease 0.5s forwards, 
     swing 4s ease-in-out infinite alternate-reverse;
     opacity: 0;
@@ -91,12 +112,12 @@ body {
     opacity: 1;
 }
 
-.hero h1 a:hover {
+/* .hero h1 a:hover {
     color: #c9b069;
     opacity: 0.8;
     transition: color 0.5s ease-in-out;
     transition: opacity 0.2s ease-in-out;
-}
+} */
 
 
 /* Side bar footer */
@@ -115,10 +136,15 @@ body {
     left: 0;
     margin-left: 1rem;
     margin-bottom: 19rem;
-    transform: rotate(-90deg);
-    transform-origin: bottom left;
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
     font-size: 8px;
-    animation: announce 1s ease 4s forwards;
+    -webkit-animation: announce 1s ease 4s forwards;
+            animation: announce 1s ease 4s forwards;
     opacity: 0;
 }
 
@@ -136,6 +162,8 @@ body {
 
 .footer-wrap footer a:hover {
     color: #b6b6b6b6;
+    -webkit-transition: color 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
 }
 
@@ -148,10 +176,19 @@ a:-webkit-any-link a {
 
 a:-webkit-any-link a:hover {
     color: #b6b6b6b6;
+    -webkit-transition: color 0.2s ease-in-out;
     transition: color 0.2s ease-in-out;
 }
 
 /* Animation keyframes */
+@-webkit-keyframes reveal {
+    from {
+      opacity: 0;  
+    }
+    to {
+        opacity: 0.8;
+    }
+}
 @keyframes reveal {
     from {
       opacity: 0;  
@@ -162,6 +199,14 @@ a:-webkit-any-link a:hover {
 }
 
 /* For text reveal */
+@-webkit-keyframes announce {
+    from {
+      opacity: 0;  
+    }
+    to {
+        opacity: 1;
+    }
+}
 @keyframes announce {
     from {
       opacity: 0;  
@@ -171,11 +216,196 @@ a:-webkit-any-link a:hover {
     }
 }
 
-@keyframes swing {
+@-webkit-keyframes swing {
     from {
-        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
     }
     to {
-        transform: rotateZ(1deg);
+        -webkit-transform: rotateZ(1deg);
+                transform: rotateZ(1deg);
     }
 }
+
+@keyframes swing {
+    from {
+        -webkit-transform: rotateZ(0deg);
+                transform: rotateZ(0deg);
+    }
+    to {
+        -webkit-transform: rotateZ(1deg);
+                transform: rotateZ(1deg);
+    }
+}
+
+/* Logo */
+#svg-3 {
+    fill: blanchedalmond;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 3rem;
+    -webkit-animation: announce 1s ease 4.5s forwards;
+            animation: announce 1s ease 4.5s forwards;
+    opacity: 0;
+}
+
+/* Outline Animation */
+.WLAfmmWe_0 {
+    stroke-dasharray: 1668 1670;
+    stroke-dashoffset: 1669;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 0ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 0ms forwards;
+  }
+
+  .WLAfmmWe_1 {
+    stroke-dasharray: 736 738;
+    stroke-dashoffset: 737;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 125ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 125ms forwards;
+  }
+
+  .WLAfmmWe_2 {
+    stroke-dasharray: 428 430;
+    stroke-dashoffset: 429;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 250ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 250ms forwards;
+  }
+
+  .WLAfmmWe_3 {
+    stroke-dasharray: 560 562;
+    stroke-dashoffset: 561;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 375ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 375ms forwards;
+  }
+
+  .WLAfmmWe_4 {
+    stroke-dasharray: 651 653;
+    stroke-dashoffset: 652;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 500ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 500ms forwards;
+  }
+
+  .WLAfmmWe_5 {
+    stroke-dasharray: 428 430;
+    stroke-dashoffset: 429;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 625ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 625ms forwards;
+  }
+
+  .WLAfmmWe_6 {
+    stroke-dasharray: 320 322;
+    stroke-dashoffset: 321;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 750ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 750ms forwards;
+  }
+
+  .WLAfmmWe_7 {
+    stroke-dasharray: 219 221;
+    stroke-dashoffset: 220;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 875ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 875ms forwards;
+  }
+
+  .WLAfmmWe_8 {
+    stroke-dasharray: 349 351;
+    stroke-dashoffset: 350;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 1000ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 1000ms forwards;
+  }
+
+  .WLAfmmWe_9 {
+    stroke-dasharray: 736 738;
+    stroke-dashoffset: 737;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 1125ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 1125ms forwards;
+  }
+
+  .WLAfmmWe_10 {
+    stroke-dasharray: 428 430;
+    stroke-dashoffset: 429;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 1250ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 1250ms forwards;
+  }
+
+  .WLAfmmWe_11 {
+    stroke-dasharray: 560 562;
+    stroke-dashoffset: 561;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 1375ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 1375ms forwards;
+  }
+
+  .WLAfmmWe_12 {
+    stroke-dasharray: 651 653;
+    stroke-dashoffset: 652;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 1500ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 1500ms forwards;
+  }
+
+  .WLAfmmWe_13 {
+    stroke-dasharray: 428 430;
+    stroke-dashoffset: 429;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 1625ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 1625ms forwards;
+  }
+
+  .WLAfmmWe_14 {
+    stroke-dasharray: 320 322;
+    stroke-dashoffset: 321;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 1750ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 1750ms forwards;
+  }
+
+  .WLAfmmWe_15 {
+    stroke-dasharray: 219 221;
+    stroke-dashoffset: 220;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 1875ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 1875ms forwards;
+  }
+
+  .WLAfmmWe_16 {
+    stroke-dasharray: 349 351;
+    stroke-dashoffset: 350;
+    -webkit-animation: WLAfmmWe_draw 2000ms linear 2000ms forwards;
+            animation: WLAfmmWe_draw 2000ms linear 2000ms forwards;
+  }
+
+  @-webkit-keyframes WLAfmmWe_draw {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes WLAfmmWe_draw {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @-webkit-keyframes WLAfmmWe_fade {
+    0% {
+      stroke-opacity: 1;
+    }
+
+    95.1219512195122% {
+      stroke-opacity: 1;
+    }
+
+    100% {
+      stroke-opacity: 0;
+    }
+  }
+
+  @keyframes WLAfmmWe_fade {
+    0% {
+      stroke-opacity: 1;
+    }
+
+    95.1219512195122% {
+      stroke-opacity: 1;
+    }
+
+    100% {
+      stroke-opacity: 0;
+    }
+  }
