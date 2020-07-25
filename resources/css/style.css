@@ -14,6 +14,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  
 }
 
 .hero {
@@ -40,8 +41,8 @@ body {
   position: absolute;
   z-index: 1;
   width: 100%;
-  -webkit-animation: announce 1s ease 5s forwards;
-          animation: announce 1s ease 5s forwards;
+  -webkit-animation: announce 1s ease 7s forwards;
+          animation: announce 1s ease 7s forwards;
   opacity: 0;
 }
 
@@ -61,19 +62,19 @@ body {
 .hero nav a {
   text-decoration: none;
   font-weight: bold;
-  color: #c9b069;
+  color: #dabe21;
   font-size: 20px;
   letter-spacing: 2.5px;
   font-weight: bold;
   letter-spacing: 0.2rem;
-  text-shadow: 0px 0.5px 1px #222;
 }
 
 .hero nav a:hover {
-  color: #5b5b5b;
-  -webkit-transition: color 0.7s ease;
-  -o-transition: color 0.7s ease;
-  transition: color 0.7s ease;
+  color: #696969;
+  -webkit-transition: color 0.5s ease-in-out;
+  -o-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+  text-shadow: 0.5px 0.5px 1px #222;
 }
 
 /* Image */
@@ -85,17 +86,17 @@ body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 1;
   mix-blend-mode: lighten;
   animation: announce 1.5s ease forwards,
   swing 4s ease-in-out infinite alternate-reverse;
   opacity: 0;
 }
+
 .studios {
-color: rgba(0,0,0,0.8);
-font-size: 5rem;
+color: rgb(0, 0, 0);
+font-size: 4.75rem;
 letter-spacing: 2.5rem;
-font-weight: 400;
+font-weight: 300;
 -webkit-animation: reveal 2s ease-in-out 7s backwards;
         animation: reveal 2s ease-in-out 7s backwards;
 }
@@ -109,9 +110,11 @@ font-weight: 400;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover; 
-  animation: reveal 5s ease 6.5s forwards, 
+  animation: reveal 3s ease 5s forwards, 
   swing 4s ease-in-out infinite alternate-reverse;
   opacity: 0;
+  filter: brightness(1.8);
+  z-index: -1;
 }
 
 .hero h1 a {
@@ -134,14 +137,14 @@ font-weight: 400;
 }
 .main-small-title {
   font-size: 1rem;
-  color: #333333;
+  color: #111111;
   font-size: 3rem;
   margin: 0 auto;
   letter-spacing: 0.4rem;
   font-family: "Montserrat", sans-serif;
 }
 .main-small-title span {
-  color: #000;
+  color: #b6b6b6;
 }
 
 /* Side bar footer */
@@ -267,9 +270,10 @@ a:-webkit-any-link a:hover {
   -webkit-transform: translate(-50%, 0%);
       -ms-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
-  -webkit-animation: announce 1s ease 5s forwards;
-          animation: announce 1s ease 5s forwards;
+  -webkit-animation: announce 2s ease 5s forwards;
+          animation: announce 2s ease 5s forwards;
   opacity: 0;
+  z-index: 2;
 }
 
 /* Media queries */
