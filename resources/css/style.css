@@ -23,7 +23,7 @@ body {
   overflow: hidden;
 }
 
-.hero h1 {
+.svg-container {
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -41,9 +41,9 @@ body {
   position: absolute;
   z-index: 1;
   width: 100%;
-  -webkit-animation: announce 1s ease 7s forwards;
+  /* -webkit-animation: announce 1s ease 7s forwards;
           animation: announce 1s ease 7s forwards;
-  opacity: 0;
+  opacity: 0; */
 }
 
 .hero nav ul {
@@ -67,6 +67,37 @@ body {
   letter-spacing: 2.5px;
   font-weight: bold;
   letter-spacing: 0.2rem;
+  text-shadow: 0.5px 0.5px 1px #222;
+}
+.navigation-item {
+  position: relative;
+}
+.navigation-link::before  {
+  content: "";
+  width: 0rem;
+  height: 0.1rem;
+  background-color: #696969;
+  position: absolute;
+  top: 0.5rem;
+  left: -1.5rem;
+  transition: width 0.5s cubic-bezier(0, 0, 0, 1);
+}
+.navigation-link::after {
+  content: "";
+  width: 0rem;
+  height: 0.1rem;
+  background-color: #696969;
+  position: absolute;
+  top: 0.5rem;
+  right: -1.5rem;
+  transition: width 0.5s cubic-bezier(0, 0, 0, 1);
+}
+.navigation-link:hover {
+  color: #696969;
+}
+.navigation-link:hover::before,
+.navigation-link:hover::after {
+  width: 1rem;
 }
 
 .hero nav a:hover {
@@ -74,7 +105,6 @@ body {
   -webkit-transition: color 0.5s ease-in-out;
   -o-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
-  text-shadow: 0.5px 0.5px 1px #222;
 }
 
 /* Image */
@@ -97,8 +127,10 @@ color: rgb(0, 0, 0);
 font-size: 4.75rem;
 letter-spacing: 2.5rem;
 font-weight: 300;
+text-shadow: 2px 2px 5px #222;
 -webkit-animation: reveal 2s ease-in-out 7s backwards;
         animation: reveal 2s ease-in-out 7s backwards;
+        
 }
 
 /* Video */
