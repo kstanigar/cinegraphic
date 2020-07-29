@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   
 }
 
@@ -306,6 +306,18 @@ a:-webkit-any-link a:hover {
           animation: announce 2s ease 5s forwards;
   opacity: 0;
   z-index: 2;
+}
+#svg-4 {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  opacity: 0;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+      transform: translate(-50%, 0%);
+-webkit-animation: announce 2s ease 5s forwards;
+      animation: announce 2s ease 5s forwards;
 }
 
 /* Media queries */
