@@ -117,9 +117,10 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   mix-blend-mode: lighten;
-  animation: announce 1.5s ease forwards,
-  swing 4s ease-in-out infinite alternate-reverse;
-  opacity: 0;
+  animation: entrance 1.8s cubic-bezier(0, 0.5, 0.2, 0.3),
+  swing 4s ease-in-out infinite 3s alternate-reverse;
+  opacity: 1;
+  transform-origin: bottom;
 }
 
 .studios {
@@ -142,8 +143,7 @@ text-shadow: 2px 2px 5px #222;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover; 
-  animation: reveal 3s ease 5s forwards, 
-  swing 4s ease-in-out infinite alternate-reverse;
+  animation: reveal 3s ease 5s forwards;
   opacity: 0;
   filter: brightness(1.8);
   z-index: -1;
@@ -269,14 +269,23 @@ a:-webkit-any-link a:hover {
   }
 }
 
+@keyframes entrance {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
 @-webkit-keyframes swing {
   from {
       -webkit-transform: rotateZ(0deg);
               transform: rotateZ(0deg);
   }
   to {
-      -webkit-transform: rotateZ(1deg);
-              transform: rotateZ(1deg);
+      -webkit-transform: rotateZ(0deg);
+              transform: rotateZ(0deg);
   }
 }
 
@@ -286,8 +295,8 @@ a:-webkit-any-link a:hover {
               transform: rotateZ(0deg);
   }
   to {
-      -webkit-transform: rotateZ(1deg);
-              transform: rotateZ(1deg);
+      -webkit-transform: rotateZ(0deg);
+              transform: rotateZ(0deg);
   }
 }
 
