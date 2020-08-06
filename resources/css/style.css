@@ -80,6 +80,8 @@ body {
   position: absolute;
   top: 0.5rem;
   left: -1.5rem;
+  -webkit-transition: width 0.5s cubic-bezier(0, 0, 0, 1);
+  -o-transition: width 0.5s cubic-bezier(0, 0, 0, 1);
   transition: width 0.5s cubic-bezier(0, 0, 0, 1);
 }
 .navigation-link::after {
@@ -90,6 +92,8 @@ body {
   position: absolute;
   top: 0.5rem;
   right: -1.5rem;
+  -webkit-transition: width 0.5s cubic-bezier(0, 0, 0, 1);
+  -o-transition: width 0.5s cubic-bezier(0, 0, 0, 1);
   transition: width 0.5s cubic-bezier(0, 0, 0, 1);
 }
 .navigation-link:hover {
@@ -120,7 +124,9 @@ body {
   animation: entrance 1.8s cubic-bezier(0, 0.5, 0.2, 0.3),
   swing 4s ease-in-out infinite 3s alternate-reverse;
   opacity: 1;
-  transform-origin: bottom;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 .studios {
@@ -143,9 +149,11 @@ text-shadow: 2px 2px 5px #222;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover; 
-  animation: reveal 3s ease 5s forwards;
+  -webkit-animation: reveal 3s ease 5s forwards; 
+          animation: reveal 3s ease 5s forwards;
   opacity: 0;
-  filter: brightness(1.8);
+  -webkit-filter: brightness(1.8);
+          filter: brightness(1.8);
   z-index: -1;
 }
 
@@ -269,12 +277,25 @@ a:-webkit-any-link a:hover {
   }
 }
 
-@keyframes entrance {
+@-webkit-keyframes entrance {
   from {
-    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
   }
   to {
-    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+}
+
+@keyframes entrance {
+  from {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  to {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
   }
 }
 
@@ -339,7 +360,8 @@ a:-webkit-any-link a:hover {
   }
   .small-display-container {
     display: block;
-    animation: reveal 3s ease 0.5s forwards; 
+    -webkit-animation: reveal 3s ease 0.5s forwards;
+            animation: reveal 3s ease 0.5s forwards; 
   }
   
 }
