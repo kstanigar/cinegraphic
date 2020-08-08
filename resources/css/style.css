@@ -363,5 +363,9 @@ a:-webkit-any-link a:hover {
     -webkit-animation: reveal 3s ease 0.5s forwards;
             animation: reveal 3s ease 0.5s forwards; 
   }
+  .hero video {
+    -webkit-animation: reveal 3s ease 3s forwards; 
+          animation: reveal 3s ease 3s forwards;
+  }
   
 }
